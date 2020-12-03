@@ -1,0 +1,22 @@
+{
+  "name": "PixivImageViewer",
+  "author": "Kurosagi",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "",
+
+  "icons":{"16":"icon.png","48":"icon.png","128":"icon.png"},
+
+  "permissions": [
+    "*://www.pixiv.net/*",
+    "*://i.pximg.net/*", "activeTab"
+  ],
+     "content_scripts": [
+    {
+      "matches": ["*://*.pixiv.net/en/artworks/*"],
+      "js": ["pixiv-image-viewer.js"],
+      "css": ["pixiv-image-viewer.css"],
+      "run_at":"document_idle"
+    }
+  ]
+}
