@@ -11,6 +11,10 @@
     "*://www.pixiv.net/*",
     "*://i.pximg.net/*", "activeTab"
   ],
+     "background": {
+      "scripts": ["background.js"],
+       "persistent": false
+    },
      "content_scripts": [
     {
       "matches": ["*://*.pixiv.net/en/artworks/*"],
