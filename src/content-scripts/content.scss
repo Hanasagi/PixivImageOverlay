@@ -1,0 +1,137 @@
+$full-page-width:100vw;
+$full-page-height:100vh;
+$base-zindex:1000;
+
+
+%svg-base{
+	fill: rgb(120,120,120);
+	position:fixed;
+	z-index: $base-zindex + 20;
+	top: 20px;
+}
+
+%justify-content{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay{
+	position:absolute;
+	width: $full-page-width;
+	height: $full-page-height;
+	background-color: rgb(35,39,42);
+	z-index:$base-zindex;
+}
+
+#showSidePanel{
+	@extend %svg-base;
+	right:60px;
+}
+
+#quitOverlay{
+	@extend %svg-base;
+	right:20px;
+}
+
+#imgPlaceholder{
+	text-align: center;
+	margin-top: 50vh;
+	transform: translateY(-50%);
+}
+#triggerExt{
+	width: 5rem;
+	height:5rem;
+	background-color:rgb(35,39,42);
+	position:absolute;
+	left:75%;
+	z-index:$base-zindex - 1;
+}
+
+#change{
+	width: $full-page-width;
+	height: $full-page-height;
+    z-index: $base-zindex+11;
+    position: absolute;
+    text-align: center;
+    top:0;
+}
+#prev{
+ 	width: $full-page-width/2;
+	height: $full-page-height;
+    float: left;
+}
+#next{
+	width: $full-page-width/2;
+	height: $full-page-height;
+    float: right;
+}
+
+#imgThumbnail{
+	top: 0px;
+    overflow: hidden visible;
+    position: absolute;
+    width: 10vw;
+    height: $full-page-height;
+    background: rgb(53, 53, 53);
+    z-index: $base-zindex+21;
+}
+#imgThumbnail::-webkit-scrollbar{
+	background:none;
+	width:3px;
+}
+#imgThumbnail::-webkit-scrollbar-thumb {
+	background-color: rgba(154,154,154,1);
+}
+
+.thumbnailIMG{
+    position: absolute;
+    z-index: $base-zindex+29;
+}
+
+img[id*="img_"]{
+	height:85vh;
+}
+
+div[id*="thumbnail_"]{
+    width: 10vw;
+    height: 15vh;
+    @extend %justify-content;
+}
+
+
+.imgNumber{
+    background: rgba(120, 120, 120, 0.5);
+    visibility: hidden;
+    width: inherit;
+    height: inherit;
+    z-index: $base-zindex+30;
+    @extend %justify-content;
+}
+
+.textNumber {
+	pointer-events: none;
+	font-family: Calibri;
+    font-size: 70px;
+    color: black;
+}
+
+.active_thumbnail{
+	background-color:rgb(100,100,100);
+}
+.active{
+	display:initial;
+}
+
+.hide{
+	display: none;
+}
+
+.panel-hide{
+	left:-300px;
+}
+
+.panel-show{
+	left:0;
+}
+
