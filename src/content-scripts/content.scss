@@ -23,6 +23,14 @@ $base-zindex:1000;
 	background-color: rgb(35,39,42);
 	z-index:$base-zindex;
 }
+.popper {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    margin-right:50px;
+    font-size: 13px;
+    border-radius: 4px;
+}
 
 #showSidePanel{
 	@extend %svg-base;
@@ -39,14 +47,33 @@ $base-zindex:1000;
 	margin-top: 50vh;
 	transform: translateY(-50%);
 }
-#triggerExt{
-	width: 5rem;
-	height:5rem;
-	background-color:rgb(35,39,42);
-	position:absolute;
-	left:75%;
+#switch{
+    width: 2rem;
+    height: 6rem;
+    position: absolute;
+    left: 65vw;
 	z-index:$base-zindex - 1;
 }
+
+#switch > div:nth-child(1) {
+	background:orange;
+	width:3px;
+	height:60px;
+	margin-left: 50%;
+    transform: translateX(-50%);
+    transition:height 1s ease-in;
+}
+
+#switch > div:nth-child(2) {
+	background: black;
+    border: solid 3px orange;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 
 #change{
 	width: $full-page-width;
@@ -57,12 +84,12 @@ $base-zindex:1000;
     top:0;
 }
 #prev{
- 	width: $full-page-width/2;
+ 	width: $full-page-width/2 - 5;
 	height: $full-page-height;
     float: left;
 }
 #next{
-	width: $full-page-width/2;
+	width: $full-page-width/2 - 5;
 	height: $full-page-height;
     float: right;
 }
@@ -99,6 +126,13 @@ div[id*="thumbnail_"]{
     @extend %justify-content;
 }
 
+.fade-enter-active, .fade-leave-active {
+            transition: all 1s ease-in-out;
+         }
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            transform :  translateY(-1000px);
+            opacity:0;
+}
 
 .imgNumber{
     background: rgba(120, 120, 120, 0.5);
