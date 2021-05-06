@@ -8,7 +8,7 @@ Example are better than word, so check this [link](https://puu.sh/HvMVz/07dc2012
 
 First and foremost, ***download the add-on*** (no, really?)
 
-Then, when you go to any pixiv artworks that has more than one image to load, the overlay will load itself.
+Then, when you go to any pixiv artworks that has more than one image to load (like this [one](https://www.pixiv.net/en/artworks/89624061)), the overlay will load itself.
 To navigate through all the images, you can either use **left click** (on each side of the image) or **arrow keys**.
 You can also use the **left panel** and click on the image you want to load it.
 
