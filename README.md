@@ -6,7 +6,7 @@ Example are better than word, so check this [link](https://puu.sh/HvMVz/07dc2012
 
 <h1>How do you use it</h1>
 
-First and foremost, ***download the app*** (no, really?)
+First and foremost, ***download the add-on*** (no, really?)
 
 Then, when you go to any pixiv artworks that has more than one image to load, the overlay will load itself.
 To nagivate through all the images, you can either use **left click** (on each side of the image) or **arrow keys**.
