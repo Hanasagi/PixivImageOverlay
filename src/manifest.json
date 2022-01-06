@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "version":"2.0",
   "name": "__MSG_extName__",
   "description": "A Vue Browser Extension",
   "default_locale": "en",
@@ -15,6 +16,7 @@
     "128": "icons/128.png"
   },
   "background": {
+    "all_frames":false,
     "scripts": [
       "js/background.js"
     ],
@@ -22,9 +24,10 @@
   },
    "content_scripts": [
     {
+      "all_frames":false,
       "matches": ["https://www.pixiv.net/*/artworks/*"],
       "js": ["js/content-script.js"],
-      "run_at":"document_idle"
+      "run_at":"document_end"
     }],
   "browser_action": {
     "default_title": "__MSG_extName__",
